@@ -1,22 +1,16 @@
 return {
 	"williamboman/mason-lspconfig.nvim",
+	"nvim-tree/nvim-web-devicons",
+
+	"MunifTanjim/nui.nvim",
+	{ "nvim-lua/plenary.nvim" },
 	{
 		"lewis6991/gitsigns.nvim",
 		opts = true,
 	},
 	{
 		"numToStr/Comment.nvim",
-		opts = {
-			toggler = {
-				line = "<leader>/",
-			},
-			opleader = {
-				line = "<leader>/",
-			},
-			extra = {
-				above = "<C-_>",
-			},
-		},
+		opts = require("configs.comment"),
 	},
 	{
 		"windwp/nvim-autopairs",
@@ -70,13 +64,10 @@ return {
 		"folke/noice.nvim",
 		event = "VeryLazy",
 		opts = {},
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-		},
+		dependencies = {},
 	},
 	{
 		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = require("configs.lualine").config,
 	},
 	{
@@ -91,22 +82,7 @@ return {
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
-		opts = {
-			event_handlers = {
-
-				{
-					event = "file_open_requested",
-					handler = function()
-						require("neo-tree.command").execute({ action = "close" })
-					end,
-				},
-			},
-		},
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons",
-			"MunifTanjim/nui.nvim",
-		},
+		opts = require("configs.neotree").opts,
 		lazy = false,
 	},
 	{
