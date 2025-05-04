@@ -1,5 +1,22 @@
 return {
 	"williamboman/mason-lspconfig.nvim",
+	"nvim-treesitter/nvim-treesitter",
+	{
+		"mxsdev/nvim-dap-vscode-js",
+	},
+	{
+		"mfussenegger/nvim-dap",
+		config = function()
+			require("configs.dap.node")
+		end,
+	},
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = { "nvim-neotest/nvim-nio" },
+		config = function()
+			require("configs.dap.ui")
+		end,
+	},
 	{
 		"aserowy/tmux.nvim",
 		config = function()
@@ -29,9 +46,8 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = require("configs.lualine").config,
 	},
-	"nvim-treesitter/nvim-treesitter",
 	{
-		"Mofiqul/dracula.nvim",
+		"catppuccin/nvim",
 		config = require("configs.color_scheme").config,
 	},
 	{
@@ -46,7 +62,6 @@ return {
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
-			{ "3rd/image.nvim", opts = {} },
 		},
 		lazy = false,
 	},
@@ -64,10 +79,15 @@ return {
 		config = require("configs.cmp").config,
 	},
 	{
+
+		"sindrets/diffview.nvim",
+		config = require("configs.diffview").config,
+	},
+	{
 		"NeogitOrg/neogit",
 		dependencies = {
-			"sindrets/diffview.nvim",
 			"nvim-telescope/telescope.nvim",
 		},
+		config = require("configs.neogit").config,
 	},
 }

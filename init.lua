@@ -1,3 +1,3 @@
 require("lazy_configs")
-require("configs")
+require("configs.global")
 require("mappings")
