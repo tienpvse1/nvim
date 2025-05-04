@@ -1,6 +1,13 @@
 return {
 	"williamboman/mason-lspconfig.nvim",
-	"nvim-treesitter/nvim-treesitter",
+
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+	},
+	{
+		"nvim-treesitter/nvim-treesitter",
+		config = require("configs.treesitter").config,
+	},
 	{
 		"mxsdev/nvim-dap-vscode-js",
 	},
