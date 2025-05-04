@@ -3,6 +3,10 @@ return {
 	"nvim-tree/nvim-web-devicons",
 
 	"MunifTanjim/nui.nvim",
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+	},
 	{ "nvim-lua/plenary.nvim" },
 	{
 		"lewis6991/gitsigns.nvim",
@@ -21,11 +25,7 @@ return {
 		"windwp/nvim-ts-autotag",
 		opts = {},
 	},
-	{
-		"akinsho/bufferline.nvim",
-		version = "*",
-		opts = require("configs.bufferline.opts"),
-	},
+
 	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
 	},
@@ -87,6 +87,7 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = require("configs.lsp.dependencies"),
 		config = function()
 			require("configs.lsp")
 		end,

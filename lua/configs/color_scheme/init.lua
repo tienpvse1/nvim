@@ -14,6 +14,7 @@ M.config = function()
 			notify = false,
 			diffview = true,
 			noice = true,
+			mason = true,
 			telescope = {
 				enabled = true,
 				style = "nvchad",
@@ -48,6 +49,8 @@ M.config = function()
 	sign("DapLogPoint", { text = "◆", texthl = "DapLogPoint", linehl = "", numhl = "" })
 
 	vim.cmd.colorscheme("catppuccin")
+
+	require("bufferline").setup(require("configs.bufferline.opts"))
 end
 
 return M
