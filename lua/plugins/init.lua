@@ -5,6 +5,20 @@ return {
 		opts = true,
 	},
 	{
+		"numToStr/Comment.nvim",
+		opts = {
+			toggler = {
+				line = "<leader>/",
+			},
+			opleader = {
+				line = "<leader>/",
+			},
+			extra = {
+				above = "<C-_>",
+			},
+		},
+	},
+	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		config = true,
