@@ -6,17 +6,19 @@ M.dependencies = {
 	"rafamadriz/friendly-snippets",
 	"hrsh7th/cmp-nvim-lsp",
 	"hrsh7th/cmp-nvim-lua",
-	"hrsh7th/cmp-buffer",
 	"hrsh7th/cmp-path",
 	"hrsh7th/cmp-cmdline",
-	"hrsh7th/cmp-emoji",
+	{
+		"onsails/lspkind.nvim",
+		opts = require("configs.lsp_kind"),
+	},
 }
 
 M.config = function()
-	local luasnip = require "luasnip"
-	require('luasnip.loaders.from_vscode').lazy_load()
-	luasnip.config.setup {}
-	local cmp = require "cmp"
+	local luasnip = require("luasnip")
+	require("luasnip.loaders.from_vscode").lazy_load()
+	luasnip.config.setup({})
+	local cmp = require("cmp")
 	local select = { behavior = cmp.SelectBehavior.Select }
 	local mapping = {
 		["<Tab>"] = cmp.mapping.select_next_item(select),
@@ -26,6 +28,7 @@ M.config = function()
 	}
 
 	cmp.setup({
+		formatting = require("configs.cmp.formatting"),
 		completion = {
 			completeopt = "menu,menuone,noinsert,noselect",
 		},
@@ -38,9 +41,8 @@ M.config = function()
 		sources = {
 			{ name = "nvim_lsp" },
 			{ name = "luasnip" },
-			{ name = "buffer" },
+			{ name = "nvim_lua" },
 			{ name = "path" },
-			{ name = "emoji" },
 		},
 	})
 end

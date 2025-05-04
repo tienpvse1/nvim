@@ -2,9 +2,13 @@ local M = {}
 
 M.config = function()
 	require("catppuccin").setup({
+		flavour = "mocha",
 		integrations = {
 			cmp = true,
-			gitsigns = true,
+			gitsigns = {
+				enabled = true,
+				transparent = false,
+			},
 			nvimtree = true,
 			treesitter = true,
 			notify = false,

@@ -1,6 +1,19 @@
 return {
 	"williamboman/mason-lspconfig.nvim",
 	{
+		"lewis6991/gitsigns.nvim",
+		opts = true,
+	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		opts = {},
+	},
+	{
 		"akinsho/bufferline.nvim",
 		version = "*",
 		opts = require("configs.bufferline.opts"),
@@ -106,5 +119,11 @@ return {
 			"nvim-telescope/telescope.nvim",
 		},
 		config = require("configs.neogit").config,
+	},
+	{
+		"kylechui/nvim-surround",
+		version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
+		opts = true,
 	},
 }
