@@ -1,14 +1,12 @@
 local M = {}
 
 M.config = function()
-	local lualine = require('lualine')
+	local lualine = require("lualine")
 	local config = {
-		disabled_filetypes = {
-			winbar = {},
-			statusline = {},
-			["neo-tree"] = {},
+		options = {
+			theme = "catppuccin",
 		},
-		extensions = { "neo-tree", "quickfix" }
+		extensions = { "neo-tree", "quickfix" },
 	}
 
 	lualine.setup(config)

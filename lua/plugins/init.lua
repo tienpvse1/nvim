@@ -14,7 +14,7 @@ return {
 		"rcarriga/nvim-dap-ui",
 		dependencies = { "nvim-neotest/nvim-nio" },
 		config = function()
-			require("configs.dap.ui")
+			require("configs.dap.ui").config()
 		end,
 	},
 	{
@@ -26,7 +26,8 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		dependencies = require("configs.telescope.dependencies"),
+		config = require("configs.telescope.config").config,
 	},
 	{
 		"stevearc/conform.nvim",

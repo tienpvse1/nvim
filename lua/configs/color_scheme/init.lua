@@ -10,6 +10,10 @@ M.config = function()
 			notify = false,
 			diffview = true,
 			noice = true,
+			telescope = {
+				enabled = true,
+				style = "nvchad",
+			},
 		},
 
 		native_lsp = {

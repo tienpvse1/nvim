@@ -1,27 +1,13 @@
 local M = {}
 
-M.dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
-
 local opts = {
 	layouts = {
 		{
 			elements = {
-				{
-					id = "scopes",
-					size = 0.25,
-				},
-				{
-					id = "breakpoints",
-					size = 0.25,
-				},
-				{
-					id = "stacks",
-					size = 0.25,
-				},
-				{
-					id = "watches",
-					size = 0.25,
-				},
+				"watches",
+				"breakpoints",
+				"stacks",
+				"scopes",
 			},
 			position = "left",
 			size = 40,
