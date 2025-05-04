@@ -11,3 +11,7 @@ end, { desc = "Git Open panel" })
 map("n", "<leader>gb", function()
   require("gitsigns").toggle_current_line_blame()
 end, { desc = "Git Toggle blame line" })
+
+map("n", "<leader>gf", function()
+  vim.cmd { cmd = "DiffviewFileHistory", args = { "%" } }
+end, { desc = "Git File history floating" })
