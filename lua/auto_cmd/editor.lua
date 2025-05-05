@@ -4,6 +4,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight after yank",
 	group = group,
 	callback = function()
-		vim.highlight.on_yank()
+		vim.hl.on_yank({
+			higroup = "CursorIM",
+			timeout = 300,
+		})
 	end,
 })

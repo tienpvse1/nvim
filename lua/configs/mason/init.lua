@@ -14,6 +14,7 @@ M.config = function()
 	require("mason").setup()
 	require("mason-lspconfig").setup({
 		ensure_installed = ensure_installed,
+		automatic_installation = false,
 	})
 end
 
