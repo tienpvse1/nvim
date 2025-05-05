@@ -8,9 +8,9 @@ map("n", "grr", function()
 	vim.lsp.buf.references()
 end, { desc = "LSP go to references" })
 
-map("n", "<leader>rn", function()
-	vim.lsp.buf.rename()
-end, { desc = "LSP rename" })
+map("n", "<leader>ra", function()
+	return ":IncRename " .. vim.fn.expand("<cword>")
+end, { desc = "LSP rename", expr = true })
 
 map("n", "<S-i>", function()
 	vim.diagnostic.open_float({ scope = "line" })
@@ -23,3 +23,4 @@ end, { desc = "LSP show code actions" })
 map("n", "<leader>ca", function()
 	vim.lsp.buf.code_action()
 end, { desc = "LSP show diagnostics" })
+

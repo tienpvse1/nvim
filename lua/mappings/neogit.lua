@@ -3,7 +3,6 @@ local map = vim.keymap.set
 local neogit = require("neogit")
 
 map("n", "<leader>gg", neogit.open, { desc = "Git Open panel" })
-
 map("n", "<leader>gl", function()
 	neogit.open({ "log" })
 end, { desc = "Git Open panel" })
@@ -27,3 +26,7 @@ end, { desc = "Git show hunk" })
 map("n", "<leader>gB", function()
 	require("gitsigns").blame()
 end, { desc = "Git show hunk" })
+
+map("n", "<leader>gd", function()
+	require("diffview").open()
+end, { desc = "Git Open Diffview" })

@@ -4,6 +4,10 @@ return {
 
 	"MunifTanjim/nui.nvim",
 	{
+		"smjonas/inc-rename.nvim",
+		opts = {},
+	},
+	{
 		"akinsho/bufferline.nvim",
 		version = "*",
 	},
@@ -63,7 +67,9 @@ return {
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
-		opts = {},
+		opts = {
+			presets = { inc_rename = true },
+		},
 		dependencies = {},
 	},
 	{
@@ -118,3 +124,4 @@ return {
 		opts = true,
 	},
 }
+
