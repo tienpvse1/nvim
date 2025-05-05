@@ -5,7 +5,8 @@ return {
 	"MunifTanjim/nui.nvim",
 	{
 		"smjonas/inc-rename.nvim",
-		opts = {},
+		opts = {
+		},
 	},
 	{
 		"akinsho/bufferline.nvim",

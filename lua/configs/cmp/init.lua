@@ -16,9 +16,10 @@ M.dependencies = {
 
 M.config = function()
 	local luasnip = require("luasnip")
-	require("luasnip.loaders.from_vscode").lazy_load()
-	luasnip.config.setup({})
 	local cmp = require("cmp")
+	require("luasnip.loaders.from_vscode").lazy_load()
+
+	luasnip.config.setup({})
 	local select = { behavior = cmp.SelectBehavior.Select }
 	local mapping = {
 		["<Tab>"] = cmp.mapping.select_next_item(select),
@@ -29,14 +30,6 @@ M.config = function()
 
 	cmp.setup({
 		formatting = require("configs.cmp.formatting"),
-		completion = {
-			completeopt = "menu,menuone,noinsert,noselect",
-		},
-		snippet = {
-			expand = function(args)
-				luasnip.lsp_expand(args.body)
-			end,
-		},
 		mapping = mapping,
 		sources = {
 			{ name = "nvim_lsp" },
