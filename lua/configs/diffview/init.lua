@@ -4,18 +4,6 @@ M.config = function()
 	local actions = require("diffview.actions")
 	local commonMappings = {
 		{ "n", "q", actions.close, { desc = "Git Close diffview" } },
-		{
-			"n",
-			"j",
-			actions.select_next_entry,
-			{ desc = "Open the diff for the next file" },
-		},
-		{
-			"n",
-			"k",
-			actions.select_prev_entry,
-			{ desc = "Open the diff for the previous file" },
-		},
 	}
 	require("diffview").setup({
 		view = {

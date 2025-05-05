@@ -23,4 +23,3 @@ end, { desc = "LSP show code actions" })
 map("n", "<leader>ca", function()
 	vim.lsp.buf.code_action()
 end, { desc = "LSP show diagnostics" })
-

@@ -63,7 +63,6 @@ return {
 		"stevearc/conform.nvim",
 		config = require("configs.conform").config,
 	},
-	{ "akinsho/toggleterm.nvim", version = "*", opts = true },
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
@@ -124,4 +123,3 @@ return {
 		opts = true,
 	},
 }
-
