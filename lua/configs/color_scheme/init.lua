@@ -11,7 +11,7 @@ M.config = function()
 			},
 			nvimtree = true,
 			treesitter = true,
-			notify = false,
+			gitgraph = true,
 			diffview = true,
 			noice = true,
 			mason = true,

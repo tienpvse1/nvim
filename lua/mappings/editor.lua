@@ -21,6 +21,8 @@ end
 
 map("n", "<leader>e", focus_tree, { desc = "Nvim tree focus" })
 
+map("i", "jj", "<ESC>", { desc = "Exit insert mode" })
+
 map("n", "<C-h>", "<C-w>h", { desc = "Editor move focus left" })
 
 map("n", "<C-j>", "<C-w>j", { desc = "Editor move focus down" })
