@@ -2,6 +2,7 @@ local M = {}
 
 M.config = function()
 	require("neogit").setup({
+		graph_style = "kitty",
 		mappings = {
 			status = {
 				["a"] = "Stage",
