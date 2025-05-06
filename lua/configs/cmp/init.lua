@@ -17,7 +17,8 @@ M.dependencies = {
 M.config = function()
 	local luasnip = require("luasnip")
 	local cmp = require("cmp")
-	require("luasnip.loaders.from_vscode").lazy_load()
+
+	require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
 
 	luasnip.config.setup({})
 	local select = { behavior = cmp.SelectBehavior.Select }
