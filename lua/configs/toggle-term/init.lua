@@ -29,8 +29,9 @@ local function open_term(buffnr)
 	-- to open a terminal, set the buffer type to terminal
 	if vim.bo[buffnr].buftype ~= "terminal" then
 		vim.cmd.term()
-		vim.cmd(":startinsert")
 	end
+
+	vim.cmd(":startinsert")
 
 	return { winnr = winnr, buffnr = buffnr }
 end

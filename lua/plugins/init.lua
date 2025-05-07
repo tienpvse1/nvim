@@ -1,12 +1,12 @@
 return {
+	-- require("configs.avante"),
 	"williamboman/mason-lspconfig.nvim",
 	"nvim-tree/nvim-web-devicons",
 
 	"MunifTanjim/nui.nvim",
 	{
 		"smjonas/inc-rename.nvim",
-		opts = {
-		},
+		opts = {},
 	},
 	{
 		"akinsho/bufferline.nvim",
