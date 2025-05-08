@@ -2,6 +2,16 @@ local M = {}
 
 M.config = function()
 	require("nvim-treesitter.configs").setup({
+		incremental_selection = {
+			enable = true,
+			keymaps = {
+				init_selection = "<C-i>",
+				node_incremental = "<C-z>",
+				node_decremental = "<C-S-z>",
+
+				scope_incremental = "<C-o>",
+			},
+		},
 		highlight = { enable = true },
 		ensure_installed = {
 			"lua",

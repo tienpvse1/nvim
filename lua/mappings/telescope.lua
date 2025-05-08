@@ -13,11 +13,14 @@ map("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 map("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
 map("n", "<leader>fz", builtin.current_buffer_fuzzy_find, { desc = "Telescope fuzzy find current buffer" })
+
 map("n", "<leader>fs", "<cmd>Navbuddy<CR>", { desc = "Navbuddy open LSP" })
 
-map("n", "<leader>fde", function()
-	vim.diagnostic.setqflist({ title = "Diagnostics" })
-end, { desc = "Telescope find errors" })
+map("n", "<leader>fs", "<cmd>Navbuddy<CR>", { desc = "Navbuddy open LSP" })
+
+map("n", "<leader>fgb", function()
+	builtin.git_branches()
+end, { desc = "Telescope find branches" })
 
 map("n", "<leader>fda", function()
 	diag_finder({ dropdown_theme }, nil)
