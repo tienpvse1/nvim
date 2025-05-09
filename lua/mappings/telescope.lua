@@ -5,6 +5,11 @@ local dropdown_theme = require("telescope.themes").get_dropdown({})
 local diag_finder = require("configs.telescope.custom.diagnostics")
 
 map("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+map("n", "<leader>fc", function()
+	builtin.find_files({
+		cwd = vim.fn.stdpath("config"),
+	})
+end, { desc = "Telescope find files" })
 
 map("n", "<leader>fw", extensions.live_grep_args.live_grep_args, { desc = "Telescope live grep with args" })
 

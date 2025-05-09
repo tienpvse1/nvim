@@ -5,11 +5,8 @@ M.config = function()
 		incremental_selection = {
 			enable = true,
 			keymaps = {
-				init_selection = "<C-i>",
-				node_incremental = "<C-z>",
-				node_decremental = "<C-S-z>",
-
-				scope_incremental = "<C-o>",
+				init_selection = "gn",
+				node_incremental = "gn",
 			},
 		},
 		highlight = { enable = true },
@@ -38,11 +35,7 @@ M.config = function()
 					["as"] = { query = "@local.scope", query_group = "locals", desc = "Select language scope" },
 				},
 
-				selection_modes = {
-					["@parameter.outer"] = "v", -- charwise
-					["@function.outer"] = "V", -- linewise
-					["@class.outer"] = "<c-v>", -- blockwise
-				},
+				selection_modes = {},
 				include_surrounding_whitespace = true,
 			},
 		},

@@ -7,6 +7,8 @@ vim.opt.undofile = true
 
 -- use system clipboard
 vim.o.clipboard = "unnamedplus"
+vim.o.spell = true
+vim.o.spelllang = "en_us"
 
 -- custom diagnostic
 vim.diagnostic.config({
