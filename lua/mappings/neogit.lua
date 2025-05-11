@@ -2,11 +2,16 @@ local map = vim.keymap.set
 
 local neogit = require("neogit")
 
-map("n", "<leader>gg", neogit.open, { desc = "Git Open panel" })
-
-map("n", "<leader>gl", function()
-	neogit.open({ "log" })
+map("n", "<leader>gg", function()
+	neogit.open({ kind = "floating" })
 end, { desc = "Git Open panel" })
+
+map(
+	"n",
+	"<leader>gl",
+	neogit.action("log", "log_all_references", { "--graph", "--color" }),
+	{ desc = "Git Open panel" }
+)
 
 map("n", "<leader>gb", function()
 	require("gitsigns").toggle_current_line_blame()

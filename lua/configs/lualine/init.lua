@@ -1,15 +1,9 @@
-local M = {}
-
-M.config = function()
-	local lualine = require("lualine")
-	local config = {
+return {
+	"nvim-lualine/lualine.nvim",
+	opts = {
 		options = {
 			theme = "catppuccin",
 		},
 		extensions = { "neo-tree", "quickfix" },
-	}
-
-	lualine.setup(config)
-end
-
-return M
+	},
+}

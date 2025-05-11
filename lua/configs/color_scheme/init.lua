@@ -1,6 +1,4 @@
-local M = {}
-
-M.config = function()
+local function config()
 	require("catppuccin").setup({
 		flavour = "mocha",
 		integrations = {
@@ -53,4 +51,7 @@ M.config = function()
 	require("bufferline").setup(require("configs.bufferline.opts"))
 end
 
-return M
+return {
+	"catppuccin/nvim",
+	config = config,
+}

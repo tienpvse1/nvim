@@ -6,8 +6,6 @@ return {
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "make",
 		},
-		-- This will not install any breaking changes.
-		-- For major updates, this must be adjusted manually.
 		version = "^1.0.0",
 	},
 }

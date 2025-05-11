@@ -1,5 +1,3 @@
-local M = {}
-
 local ensure_installed = {
 	"lua_ls",
 	"ts_ls",
@@ -10,7 +8,7 @@ local ensure_installed = {
 	"js-debug-adapter",
 }
 
-M.config = function()
+local function config()
 	require("mason").setup()
 	require("mason-lspconfig").setup({
 		ensure_installed = ensure_installed,
@@ -18,4 +16,7 @@ M.config = function()
 	})
 end
 
-return M
+return {
+	"williamboman/mason.nvim",
+	config = config,
+}

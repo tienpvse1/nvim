@@ -2,11 +2,13 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
--- allows to undo after restart nvim
+-- allows to undo after restart neovim
 vim.opt.undofile = true
 
 -- use system clipboard
 vim.o.clipboard = "unnamedplus"
+
+-- use spellcheck with English lang
 vim.o.spell = true
 vim.o.spelllang = "en_us"
 

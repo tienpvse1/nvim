@@ -1,6 +1,6 @@
 local M = {}
 
-M.dependencies = {
+local dependencies = {
 	"L3MON4D3/LuaSnip",
 	"saadparwaiz1/cmp_luasnip",
 	"rafamadriz/friendly-snippets",
@@ -14,7 +14,7 @@ M.dependencies = {
 	},
 }
 
-M.config = function()
+local function config()
 	local luasnip = require("luasnip")
 	local cmp = require("cmp")
 
@@ -41,4 +41,10 @@ M.config = function()
 	})
 end
 
-return M
+return {
+	"hrsh7th/nvim-cmp",
+	event = { "InsertEnter" },
+	enabled = true,
+	dependencies = dependencies,
+	config = config,
+}
