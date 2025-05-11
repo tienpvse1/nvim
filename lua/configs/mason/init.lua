@@ -3,9 +3,6 @@ local ensure_installed = {
 	"ts_ls",
 	"svelte",
 	"graphql",
-
-	-- debugger
-	"js-debug-adapter",
 }
 
 local function config()

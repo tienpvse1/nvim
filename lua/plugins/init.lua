@@ -14,6 +14,7 @@ return {
 	require("configs.noice"),
 	require("configs.conform"),
 	require("configs.telescope"),
+	require("configs.todo_comment"),
 	"williamboman/mason-lspconfig.nvim",
 	"nvim-tree/nvim-web-devicons",
 

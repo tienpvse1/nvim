@@ -10,6 +10,7 @@ local function config()
 			nvimtree = true,
 			treesitter = true,
 			gitgraph = true,
+			which_key = true,
 			diffview = true,
 			noice = true,
 			mason = true,

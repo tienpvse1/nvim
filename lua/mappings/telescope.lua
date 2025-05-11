@@ -30,3 +30,7 @@ end, { desc = "Telescope find branches" })
 map("n", "<leader>fda", function()
 	diag_finder({ dropdown_theme }, nil)
 end, { desc = "Telescope find all diagnostics" })
+
+map("n", "<leader>tt", function()
+	vim.cmd({ cmd = "TodoTelescope" })
+end, { desc = "Todo Comment grep" })
