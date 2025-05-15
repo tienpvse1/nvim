@@ -15,7 +15,6 @@ return {
 	require("configs.telescope"),
 	require("configs.todo_comment"),
 	require("configs.yazi"),
-	require("configs.wilder"),
 	"williamboman/mason-lspconfig.nvim",
 	"nvim-tree/nvim-web-devicons",
 

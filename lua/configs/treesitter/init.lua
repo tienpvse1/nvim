@@ -21,6 +21,7 @@ M.config = function()
 			"svelte",
 			"json",
 			"sql",
+			"vimdoc"
 		},
 		textobjects = {
 			select = {
