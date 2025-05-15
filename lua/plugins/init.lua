@@ -7,7 +7,6 @@ return {
 	require("configs.diffview"),
 	require("configs.cmp"),
 	require("configs.lsp"),
-	require("configs.neotree"),
 	require("configs.mason"),
 	require("configs.color_scheme"),
 	require("configs.lualine"),
@@ -15,6 +14,8 @@ return {
 	require("configs.conform"),
 	require("configs.telescope"),
 	require("configs.todo_comment"),
+	require("configs.yazi"),
+	require("configs.wilder"),
 	"williamboman/mason-lspconfig.nvim",
 	"nvim-tree/nvim-web-devicons",
 

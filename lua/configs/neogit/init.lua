@@ -21,8 +21,5 @@ return {
 				border = "rounded",
 			},
 		})
-
-		local events = require("neo-tree.events")
-		events.fire_event(events.GIT_EVENT)
 	end,
 }

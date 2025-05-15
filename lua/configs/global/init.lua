@@ -4,6 +4,7 @@ vim.opt.termguicolors = true
 
 -- allows to undo after restart neovim
 vim.opt.undofile = true
+vim.opt.ignorecase = true
 
 -- use system clipboard
 vim.o.clipboard = "unnamedplus"
