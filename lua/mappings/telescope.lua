@@ -22,6 +22,7 @@ map("n", "<leader>fz", builtin.current_buffer_fuzzy_find, { desc = "Telescope fu
 map("n", "<leader>fs", "<cmd>Navbuddy<CR>", { desc = "Navbuddy open LSP" })
 
 map("n", "<leader>fs", "<cmd>Navbuddy<CR>", { desc = "Navbuddy open LSP" })
+map("n", "<leader>u", extensions.undo.undo, { desc = "Navbuddy open LSP" })
 
 map("n", "<leader>fgb", function()
 	builtin.git_branches()
