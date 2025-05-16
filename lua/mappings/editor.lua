@@ -18,3 +18,6 @@ map("n", "<ESC>", vim.cmd.noh, { desc = "Split the editor vertically" })
 map("n", "<C-s>", function()
 	vim.cmd.write()
 end, { desc = "Editor save file" })
+
+map({'n', 'o', 'x'}, '<C-p>', '<C-o>', { silent = true })
+map({'n', 'o', 'x'}, '<C-n>', '<C-i>', { silent = true })
